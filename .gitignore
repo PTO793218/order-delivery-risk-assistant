@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.git/
+node_modules/
+**/bin/
+**/obj/
+**/dist/
+**/TestResults/
+temp/
+output/
+test-results/
+playwright-report/
+*.log
+.DS_Store
+Thumbs.db

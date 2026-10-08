@@ -1,0 +1,12 @@
+{
+  "name": "order-delivery-risk-assistant",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "订单交付风险分析助手：可交互的 AI 产品设计演示原型",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser-smoke.cjs"
+  },
+  "devDependencies": { "playwright-core": "1.56.1" }
+}

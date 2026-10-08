@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="订单交付风险分析助手 V0.3 高保真交互原型"
+    />
+    <title>订单交付风险分析助手 V0.3 · 网商</title>
+    <link rel="icon" type="image/png" href="./assets/wangshang-logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./workspace.css?v=20261004-copy" />
+  </head>
+  <body>
+    <div class="app-shell" id="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="主导航">
+        <div class="brand-lockup">
+          <img
+            src="./assets/wangshang-logo.png"
+            alt="网商"
+            class="brand-logo"
+          />
+          <span class="brand-copy">
+            <strong>交付风险分析助手</strong>
+          </span>
+        </div>
+
+        <button class="new-analysis" type="button" data-nav="welcome">
+          <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></svg></span>
+          发起风险分析
+        </button>
+
+        <nav class="primary-nav" aria-label="P0产品功能">
+          <button class="nav-item" type="button" data-nav="workbench">
+            <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg></span>
+            <span>风险看板</span>
+            <span class="nav-count" id="risk-count">—</span>
+          </button>
+        </nav>
+
+        <section class="boundary-card" aria-label="原型边界">
+          <span class="boundary-mark" aria-hidden="true">i</span>
+          <div>
+            <p>演示快照，不写回或外发。</p>
+          </div>
+        </section>
+
+        <div class="sidebar-foot">
+          <button class="reset-demo" type="button" data-action="reset">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6" /></svg></span>
+            重置演示
+          </button>
+          <button class="user-profile" type="button" data-action="switch-role">
+            <span class="user-avatar" id="user-avatar">林</span>
+            <span class="user-copy">
+              <strong id="user-name">林芳</strong>
+              <small id="user-role">计划主管 · 示例制造中心</small>
+            </span>
+            <span class="role-switch">切换角色</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="main-region">
+        <header class="topbar">
+          <div class="system-scope" id="system-scope"></div>
+          <div class="topbar-actions">
+            <span class="read-only-badge">只读快照</span>
+          </div>
+        </header>
+
+        <div class="content-grid" id="content-grid">
+          <main class="main-view" id="main-view" aria-live="polite"></main>
+          <aside
+            class="context-panel"
+            id="context-panel"
+            aria-label="AI上下文协作面板"
+          ></aside>
+        </div>
+      </section>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast-root" aria-live="assertive"></div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
